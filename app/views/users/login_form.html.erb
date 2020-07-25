@@ -1,0 +1,12 @@
+<h1>LogIn</h1>
+<!-- form_tagメソッドを追加してください -->
+<%= form_tag("/login") do %>
+<p>Id</p>
+<!-- name属性を追加してください -->
+<input name="user_account">
+<p>Password</p>
+<input type="password" name="password">
+<input type="submit" value="ログイン">
+<!-- form_tag用のendを追加してください -->
+<% end %>
+
