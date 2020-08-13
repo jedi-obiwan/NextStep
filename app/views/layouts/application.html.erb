@@ -7,16 +7,26 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= render 'common/header' %>
+    <header>
+      <%= render 'common/header' %>
+    </header>
+
     <% if flash[:notice] %>
     <div class="flash">
         <%= flash[:notice] %>
     </div>
     <% end %>
-    <%= yield %>
-    <%= render 'common/footer' %>
+
+    <div class="main-view">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <%= render 'common/footer' %>
+    </footer>
   </body>
 </html>
